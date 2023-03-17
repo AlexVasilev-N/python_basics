@@ -13,7 +13,7 @@
 
 """
 
-user_name = input("Введите Ваше имя: ")
+user_name = input("Введите Ваше имя:  ")
 user_password = input("Введите Ваш пароль: ")
 user_age = input("Введите Ваш возраст: ")
 
