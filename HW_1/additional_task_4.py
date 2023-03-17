@@ -11,13 +11,26 @@
 60 -> 10  40  10
 """
 
-Katy = 0
-Sergei = 0
-Petr = 0
-
 number = int(input("Введите количество бумажных журавликов: "))
 
-result = number // 2
+if not number % 6:
+    x = number // 6
 
-print(result)
-print(number)
+    Kate = x * 4
+    Sergei = x
+    Petr = x
+
+    print(f" Катя сделала {Kate} журавликов, Сергей сделал {Sergei}"
+          f" журавликов, Петр сделал {Petr} журавлей")
+
+if number % 6:
+    x = number // 6
+
+    Kate = x * 4
+    Sergei = x
+    Petr = x
+    number_2 = number - (Kate + Sergei + Petr)
+
+    print(f" Катя сделала {Kate} журавликов, Сергей сделал {Sergei}"
+          f" журавликов, Петр сделал {Petr} журавлей"
+          f" и ребта не доделали {number_2} журавлей")
