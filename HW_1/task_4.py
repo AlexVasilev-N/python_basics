@@ -19,36 +19,22 @@
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
 
-while True:
-    income = input("Введите оборот компании: ")
-    if income.isdigit():
-        income = int(income)
-        break
-    print("Ошибка, введено не число")
-
-while True:
-    cost = input("Введите сумму расходов компании: ")
-    if cost.isdigit():
-        cost = int(cost)
-        break
-    print("Ошибка, введено не число")
+income = int(input("Введите оборот компании: "))
+cost = int(input("Введите сумму расходов компании: "))
 
 fin_result = income - cost
 
 if fin_result > 0:
-    ratio = income // cost
-    print(f"Ваша прибыль равна: {fin_result}, Вы молодец!! Работает в плюс \n "
-          f"Соотношение составляет {ratio}")
-    while True:
-        worked_count = input("Введите количество сотрудников: ")
-        if worked_count.isdigit():
-            worked_count = int(worked_count)
-            break
-        print("Ошибка вода")
+    ratio = income / cost
+    print(
+        f"Ваша прибыль равна: {fin_result}, Вы молодец!! Работаете в плюс \n "
+        f"Соотношение составляет {ratio}")
+
+    worked_count = int(input("Введите количество сотрудников: "))
     profit_of_worker = fin_result // worked_count
     print(f"Прибыль на одного сотрудника составляет: {profit_of_worker}")
 
 elif not fin_result:
-    print("Нет прибыли нет убытков! ")
+    print("Нет прибыли нет убытков! Надо что-то делать ")
 else:
     print(f"Казна пустеет, ваши убытки: {fin_result}")

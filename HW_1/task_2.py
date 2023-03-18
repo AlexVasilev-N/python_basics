@@ -10,17 +10,9 @@
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
 
-time = int(input("Введите время в секундах: "))
+seconds = int(input("Введите время в секундах: "))
 
-day = time // (24 * 3600)
+hour = seconds % (24 * 3600) / 3600
+minutes = seconds // 60
 
-time = time % (24 * 3600)
-hour = time // 3600
-
-time %= 3600
-minutes = time // 60
-
-time %= 60
-seconds = time
-
-print(f" Дней: {day} : Часов: {hour} : Минут: {minutes} : Секунд: {seconds} ")
+print(f" ч:м:с -  {hour} : {minutes} : {seconds} ")
